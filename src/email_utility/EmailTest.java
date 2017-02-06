@@ -15,6 +15,7 @@ public class EmailTest {
 
     /** 
      * @param args the command line arguments
+     * @throws javax.mail.MessagingException
      */
     public static void main(String[] args) throws MessagingException {
         EmailUtil util = new EmailUtil("fluttershy1337@hotmail.com", "Klippe93");
@@ -22,8 +23,9 @@ public class EmailTest {
         String receiver = "jonathan.henriksen@yandex.com";
         String subject = "Final Test From Java";
         String message = "This is so fucking cool, it is actually working like it is supposed to";
+        String file = "C:/Users/John/Desktop/textfile.txt";
         
-        util.sendEmail(receiver, subject, message);
+        util.sendEmail(receiver, subject, message, file);
     }
     
 }
